@@ -3,7 +3,7 @@
  * @return {number}
  */
 var romanToInt = function(s) {
- let result = 0;
+let result = 0;
   let romanToNumsArray = Array.from(s).map((el) => {
     switch (el) {
       case 'I':
@@ -22,12 +22,13 @@ var romanToInt = function(s) {
         return 1000;
     }
   });
-  for (let i = 0; i < romanToNumsArray.length; i++) {
-    if (romanToNumsArray[i] < romanToNumsArray[i + 1]) {
-      result -= romanToNumsArray[i];
+  romanToNumsArray.forEach((el, idx) => {
+    if (romanToNumsArray[idx] < romanToNumsArray[idx + 1]) {
+      result -= romanToNumsArray[idx];
     } else {
-      result += romanToNumsArray[i];
+      result += romanToNumsArray[idx];
     }
-  }
+  });
+  return result;
   return result;
 };
