@@ -3,18 +3,12 @@
  * @return {string}
  */
 var longestCommonPrefix = function (strs) {
-  const t = [...strs[0]];
-  const commonPrefix = [];
-
-  for (let i = 0; i < t.length; i++) {
-    const check = strs.filter((val, idx) => {
-      return val.startsWith(t.slice(0, i + 1).join(''));
-    });
-
-    if (check.length === strs.length) {
-      commonPrefix.push(t.slice(0, i + 1));
+ const commonPrefix = [];
+  [...strs[0]].forEach((_, idx) => {
+    if (strs.filter((val, __) => val.startsWith([...strs[0]].slice(0, idx + 1).join(''))).length === strs.length) {
+      commonPrefix.push([...strs[0]].slice(0, idx + 1));
     }
-  }
-  return commonPrefix.length === 0 ? '' : commonPrefix.pop().join('');
+  });
+  return commonPrefix.length > 0 ? commonPrefix.pop().join('') : '';
 };
 
