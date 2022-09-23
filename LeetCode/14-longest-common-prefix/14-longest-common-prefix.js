@@ -5,7 +5,7 @@
 var longestCommonPrefix = function (strs) {
  const commonPrefix = [];
   [...strs[0]].forEach((_, idx) => {
-    if (strs.every((val, __) => val.startsWith([...strs[0]].slice(0, idx + 1).join('')))) {
+     if (strs.filter((val, __) => val.startsWith([...strs[0]].slice(0, idx + 1).join(''))).length === strs.length) {
       commonPrefix.push([...strs[0]].slice(0, idx + 1));
     }
   });
