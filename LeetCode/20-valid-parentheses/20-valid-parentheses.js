@@ -9,6 +9,7 @@ var isValid = function(s) {
       '{': '}',
       '[': ']',
     };
+    
   for (let i = 0; i < s.length ; i++) {
     if (s[i] in map) stack.push(map[s[i]]);
     else if (s[i] === stack.at(-1)) stack.pop();
