@@ -4,8 +4,7 @@
  * @return {number}
  */
 var searchInsert = function(nums, target) {
-    let idx;
-  idx = nums.findIndex((val, idx) => {
+   let idx = nums.findIndex((val, idx) => {
     if (!nums.includes(target)) {
       return val > target;
     }
