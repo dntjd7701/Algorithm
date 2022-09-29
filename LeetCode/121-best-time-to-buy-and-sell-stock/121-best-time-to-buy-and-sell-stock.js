@@ -3,18 +3,18 @@
  * @return {number}
  */
 var maxProfit = function(prices) {
- let left = 0; // Buy
-  let right = 1; // sell
-  let max_profit = 0;
-  while (right < prices.length) {
-    if (prices[left] < prices[right]) {
-      let profit = prices[right] - prices[left]; // our current profit
+  let buyDay = 0; //index
+  let sellDay = 1;
+  let maxProfit = 0;
 
-      max_profit = Math.max(max_profit, profit);
+  // 이전값과 비교할 수 없음.
+  while (sellDay < prices.length) {
+    if (prices[buyDay] < prices[sellDay]) {
+      maxProfit = Math.max(maxProfit, prices[sellDay] - prices[buyDay]);
     } else {
-      left = right;
+      buyDay = sellDay;
     }
-    right++;
+    sellDay++;
   }
-  return max_profit;
+  return maxProfit;
 };
