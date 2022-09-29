@@ -3,14 +3,13 @@
  * @return {number}
  */
 var singleNumber = function(nums) {
-     if (nums === null || nums.length <= 2) return nums;
-  let storage = new Set();
+  let storage = [];
   while (nums.length > 0) {
     let curEl = nums.shift();
-    if (!nums.includes(curEl) && !storage.has(curEl)) {
+    if (!nums.includes(curEl) && !storage.includes(curEl)) {
       return curEl;
     } else {
-      storage.add(curEl);
+      storage.push(curEl);
     }
   }
 };
