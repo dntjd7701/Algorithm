@@ -1,5 +1,4 @@
 function solution(n) {
-    let answer = 0; 
-    [...String(n)].forEach((el) => answer += Number(el));
-    return answer;
+    
+    return [...String(n)].reduce((acc, curVal, curIdx) => acc+Number(curVal), 0);;
 }
