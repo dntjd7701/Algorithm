@@ -1,10 +1,4 @@
 function solution(my_string) {
-  return [...my_string]
-    .map((el) => {
-      if (new RegExp(/[A-Z]/).test(el)) {
-        return el.toLowerCase();
-      }
-      return el.toUpperCase();
-    })
-    .join('');
+  return my_string.replace(/\w/g, (el) => (/[A-Z]/.test(el) ? el.toLowerCase() : el.toUpperCase()));
+
 }
