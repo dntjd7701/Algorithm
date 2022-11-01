@@ -1,7 +1,7 @@
 function solution(cipher, code) {
-     var answer = [];
+  var answer = '';
   for (let i = code - 1; i < cipher.length; i += code) {
-    answer.push(cipher.charAt(i));
+    answer += cipher.charAt(i);
   }
-  return answer.join('');
+  return answer;
 }
