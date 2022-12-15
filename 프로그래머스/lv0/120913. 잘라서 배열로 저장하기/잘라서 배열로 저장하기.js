@@ -1,6 +1,5 @@
 function solution(my_str, n) {
-   let arr = [];
-  let [prev, cur] = [0, n];
+  let [prev, cur,arr] = [0, n, []];
   for (let i = 0; i < Math.ceil(my_str.length / n); i++) {
     arr.push(my_str.slice(prev, cur));
     [prev, cur] = [cur, cur + n];
