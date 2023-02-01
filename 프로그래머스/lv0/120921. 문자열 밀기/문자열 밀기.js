@@ -3,6 +3,6 @@ function solution(A, B) {
   for (let i = 0; i < A.length; i++) {
     if (arr.join('') === B) return i;
     arr.unshift(arr.pop());
-  }
+  } 
   return -1;
 }
