@@ -1,5 +1,5 @@
 function solution(array) {
-    let obj = new Object({});
+   let obj = new Object({});
   array.forEach((el) => {
     if (!obj.hasOwnProperty(el)) {
       obj[el] = 1;
@@ -7,12 +7,14 @@ function solution(array) {
       ++obj[el];
     }
   });
-  const t = Object.values(obj).reduce((prev, cur) => {
-    return Math.max(prev, cur);
-  });
 
   const rst = Object.keys(obj).filter((key) => {
-    return obj[key] === t;
+    return (
+      obj[key] ===
+      Object.values(obj).reduce((prev, cur) => {
+        return Math.max(prev, cur);
+      })
+    );
   });
 
   return rst.length > 1 ? -1 : +rst[0];
