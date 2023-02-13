@@ -3,4 +3,4 @@ function solution(quiz) {
     const [expression, compare] = el.split('=');
     return eval(expression) === +compare ? 'O' : 'X';
   });
-}
+} 
