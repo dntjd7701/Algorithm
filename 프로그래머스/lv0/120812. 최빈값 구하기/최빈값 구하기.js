@@ -7,7 +7,7 @@ function solution(array) {
       ++obj[el];
     }
   });
-
+ 
   const rst = Object.keys(obj).filter((key) => {
     return (
       obj[key] ===
