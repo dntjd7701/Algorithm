@@ -13,7 +13,7 @@ function solution(array) {
       obj[key] ===
       Object.values(obj).reduce((prev, cur) => {
         return Math.max(prev, cur);
-      })
+      }) 
     );
   });
 
