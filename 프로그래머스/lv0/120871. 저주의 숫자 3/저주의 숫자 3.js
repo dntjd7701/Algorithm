@@ -1,6 +1,6 @@
 function solution(n) {
  let x3 = 0;
-
+ 
   for (let i = 1; i <= n; i++) {
     x3++;
     while (
