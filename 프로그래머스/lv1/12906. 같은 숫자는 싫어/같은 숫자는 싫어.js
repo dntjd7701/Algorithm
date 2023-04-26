@@ -5,5 +5,5 @@ function solution(arr) {
       answer.push(val);
     }
   });
-  return answer;
+  return answer; 
 }
