@@ -1,4 +1,5 @@
 function solution(numbers) {
+    
   let nums = numbers.map(String);
   if (nums.every((n) => n.length === 1)) {
     nums.sort((a, b) => b - a);
