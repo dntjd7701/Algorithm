@@ -1,14 +1,11 @@
 function solution(numbers) {
-    var answer = numbers.map(String);
-    if (answer.every(function (num) { return num.length === 1; })) {
-        answer.sort(function (a, b) { return b - a; });
-    } else {
-        answer.sort(function (a, b) {
-            var ab = a + b;
-            var ba = b + a;
-            return ba.localeCompare(ab);
-        });
-    }
-    answer = answer.join('');
-    return answer[0] === '0' ? '0' : answer;
+  let nums = numbers.map(String);
+  if (nums.every((n) => n.length === 1)) {
+    nums.sort((a, b) => b - a);
+  } else {
+    nums.sort((a, b) => {
+      return b + a - (a + b);
+    });
+  }
+  return nums[0] === '0' ? '0' : nums.join('');
 }
