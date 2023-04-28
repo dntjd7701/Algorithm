@@ -4,6 +4,6 @@ function solution(arr) {
     if (arr[idx - 1] !== val) {
       answer.push(val);
     }
-  });
+  }); 
   return answer; 
 }
