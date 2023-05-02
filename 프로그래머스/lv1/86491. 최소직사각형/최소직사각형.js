@@ -7,4 +7,4 @@ function solution(sizes) {
     big.push(sorted[1]);
   });
   return Math.max(...big) * Math.max(...small);
-}
+} 
