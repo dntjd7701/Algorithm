@@ -17,6 +17,6 @@ function solution(n, computers) {
             DFS(i);
             answer++;
         }
-    }
+    } 
     return answer;
 }
