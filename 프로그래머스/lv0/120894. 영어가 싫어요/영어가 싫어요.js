@@ -1,5 +1,5 @@
 function solution(numbers) {
-    let obj = {
+  const obj = {
     zero: 0,
     one: 1,
     two: 2,
@@ -11,9 +11,5 @@ function solution(numbers) {
     eight: 8,
     nine: 9,
   };
-  for (const [key, value] of Object.entries(obj)) {
-    const regExp = new RegExp(key, 'gi');
-    numbers = numbers.replace(regExp, value);
-  }
-  return +numbers;
+ return +numbers.replace(/zero|one|two|three|four|five|six|seven|eight|nine/g, (v) => obj[v]);
 }
