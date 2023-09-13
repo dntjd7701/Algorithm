@@ -1,5 +1,4 @@
-let fs = require("fs");
-let input = fs.readFileSync("/dev/stdin").toString().split("\n");
+let input = require("fs").readFileSync("/dev/stdin").toString().split("\n");
 let lStack = input[0].split(""); //ex) abcd 
 let rStack = [];
 let len = parseInt(input[1]); //ex) 4 
