@@ -19,3 +19,17 @@ function josephusPermutation(N, K) {
 const [N,K] = require('fs').readFileSync('/dev/stdin').toString().trim().split(' ').map((v) => +v);
 const result = josephusPermutation(N, K);
 console.debug(`<${result.join(', ')}>`);
+
+
+
+// let rst = [];
+// let [N, K] = require('fs').readFileSync('/dev/stdin').toString().trim().split(' ').map((v) => +v);
+// loop(Array.from({length:N}, (_, idx) => idx + 1));
+// function loop(circle = []) {
+//     if(circle.length === 0) return;
+//     let index = (K - 1) % circle.length;
+//     rst.push(circle[index]);
+//     loop(circle.splice(index + 1).concat(circle.splice(0, index)));
+// };
+
+// console.debug(`<${rst.join(', ')}>`);
