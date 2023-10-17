@@ -1,21 +1,21 @@
-const readline = require("readline");
-
-const solution = (line) => {
-  let answer = line;
-  const regExp = /<[a-z\s]+>|[a-z0-9]+/g;
-
-  answer = answer.replace(regExp, (word) => {
-    return word.startsWith("<") ? word : word.split("").reverse().join("");
-  });
-
-  return answer;
-};
+const readline = require('readline');
 
 const rl = readline.createInterface({
   input: process.stdin,
-  output: process.stdout,
+  output: process.stdout
 });
 
-rl.on("line", (line) => {
-  console.log(solution(line));
+// 한 줄씩 입력을 받을 때마다 호출되는 이벤트 핸들러
+let answer = '';
+rl.on('line', (input) => {
+    const regExp = /<[^>]+>|[^<>\s]+/g;
+    answer += input.replace(regExp, (match) => {
+        return match.startsWith('<') ? match : match.split('').reverse().join('');
+    });
+    rl.close();
+});
+
+// 종료 이벤트 핸들러
+rl.on('close', () => {
+    console.log(answer); // 마지막의 불필요한 개행 문자를 제거한 후 출력
 });
