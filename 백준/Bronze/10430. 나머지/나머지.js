@@ -1,12 +1,39 @@
-const fs = require('fs');
-const filePath = '/dev/stdin' 
+const fs = require('fs')
+  .readFileSync('/dev/stdin')
+  .toString()
+  .trim()
+  .split(' ');
 
-let input = fs.readFileSync(filePath, 'utf-8').trim().split(' ');
-const A = +input[0];
-const B = +input[1];
-const C = +input[2];
+const obj = {
+  A: fs[0],
+  B: fs[1],
+  C: fs[2],
+  '×': '*',
+};
 
-console.log((A + B) % C);
-console.log(((A % C) + (B % C)) % C);
-console.log((A * B) % C);
-console.log(((A % C) * (B % C)) % C);
+const questions = [
+  '(A+B)%C',
+  '((A%C) + (B%C))%C',
+  '(A×B)%C',
+  '((A%C) × (B%C))%C',
+];
+
+const calc = (expression) => {
+  try {
+    return new Function(`return ${expression}`)();
+  } catch (error) {
+    return 'Error';
+  }
+};
+
+console.log(
+  questions
+    .map((v) => {
+      return v
+        .split('')
+        .map((w) => (!!obj?.[w] ? obj[w] : w))
+        .join('');
+    })
+    .map((v) => calc(v))
+    .join('\n')
+);
