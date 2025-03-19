@@ -12,7 +12,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 
 - [x] 16968번 - 차량 번호판 1
 - [x] 16917번 - 양념 반 후라이드 반
-- [] 16922번 - 로마 숫자 만들기
+- [ ] 16922번 - 로마 숫자 만들기
 - [ ] 16924번 - 십자가 찾기
 - [ ] 16936번 - 나3곱2
 - [ ] 16937번 - 두 스티커
