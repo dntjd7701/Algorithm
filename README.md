@@ -5,7 +5,7 @@
 ## 🔹 1주차: 기초 알고리즘 + 배열/문자열  
 > 목표: JavaScript 문법 적응 + 기초 패턴 이해
 
-- [ ][K번째 수 (정렬)](https://school.programmers.co.kr/learn/courses/30/lessons/42748)  
+- [x][K번째 수 (정렬)](https://school.programmers.co.kr/learn/courses/30/lessons/42748)  
 - [ ] [모의고사 (완전탐색)](https://school.programmers.co.kr/learn/courses/30/lessons/42840)  
 - [ ] [문자열 다루기 기본](https://school.programmers.co.kr/learn/courses/30/lessons/12918)  
 - [ ] [자릿수 더하기](https://school.programmers.co.kr/learn/courses/30/lessons/12931)  
