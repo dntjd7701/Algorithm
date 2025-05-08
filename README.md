@@ -8,7 +8,7 @@
 
 - [x] [K번째 수 (정렬)](https://school.programmers.co.kr/learn/courses/30/lessons/42748)
 - [x] [모의고사 (완전탐색)](https://school.programmers.co.kr/learn/courses/30/lessons/42840)
-- [ ] [문자열 다루기 기본](https://school.programmers.co.kr/learn/courses/30/lessons/12918)
+- [x] [문자열 다루기 기본](https://school.programmers.co.kr/learn/courses/30/lessons/12918)
 - [ ] [자릿수 더하기](https://school.programmers.co.kr/learn/courses/30/lessons/12931)
 - [ ] [같은 숫자는 싫어](https://school.programmers.co.kr/learn/courses/30/lessons/12906)
 - [ ] [이상한 문자 만들기 (문자열 다루기)](https://school.programmers.co.kr/learn/courses/30/lessons/12930)
