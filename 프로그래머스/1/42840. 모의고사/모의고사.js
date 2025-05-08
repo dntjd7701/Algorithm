@@ -16,10 +16,8 @@ function solution(answers) {
   const max = Math.max(...scores);
 
     
-  const result = []; 
-  scores.forEach((score, i) => {
-    if(score === max) result.push(i + 1); 
-  })
-
-  return result; 
+ return scores
+    .map((score, index) => ({ score, index: index + 1 }))
+    .filter(({ score }) => score === max)
+    .map(({ index }) => index);
 }
