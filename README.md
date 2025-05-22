@@ -22,7 +22,7 @@ JS -> JAVA
 > 목표: 자료구조로 로직 표현 연습
 
 - [x] [완주하지 못한 선수 (해시)](https://school.programmers.co.kr/learn/courses/30/lessons/42576)
-- [ ] [전화번호 목록 (해시)](https://school.programmers.co.kr/learn/courses/30/lessons/42577)
+- [x] [전화번호 목록 (해시)](https://school.programmers.co.kr/learn/courses/30/lessons/42577)
 - [ ] [기능 개발 (큐)](https://school.programmers.co.kr/learn/courses/30/lessons/42586)
 - [ ] [올바른 괄호 (스택)](https://school.programmers.co.kr/learn/courses/30/lessons/12909)
 - [ ] [다리를 지나는 트럭 (큐, 시뮬레이션)](https://school.programmers.co.kr/learn/courses/30/lessons/42583)
