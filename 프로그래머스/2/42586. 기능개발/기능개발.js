@@ -17,6 +17,8 @@ function solution(progresses, speeds) {
         }
     }
 
+    
+    
     // 마지막 묶음 추가
     answer.push(count);
 
