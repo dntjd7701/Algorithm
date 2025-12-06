@@ -1,6 +1,6 @@
 // W개씩 H행에
 
-const { readFile } = require('../../util');
+const { readFile } = require('../util');
 
 // 모든 참가자는 세로로 N칸, 가로로 M칸 이상 비우고 앉아야함
 
